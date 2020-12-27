@@ -55,10 +55,10 @@ vector<Sinhvien> Nop(Sinhvien a,vector<Sinhvien>&sv){
 vector<Sinhvien> Rut(Sinhvien a,vector<Sinhvien>&sv){
     Sinhvien m;
     int i=0;
-        
+    for(Sinhvien ele:sv){
     if(a.Nganhnop==ele.Nganhnop && a.Diem==ele.Diem && a.Hoten==ele.Hoten){
         sv.erase(sv.begin()+i);
-        cout<<"Da rut thanh cong!!"
+        cout<<"Da rut thanh cong!!";
         break;
     }
         i++;
