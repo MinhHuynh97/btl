@@ -30,7 +30,9 @@ void Sapxep(vector<Sinhvien>&a){
 void Ketqua(vector<Sinhvien>&a){
     Sapxep(a);
     if(a.size()<300){
+        cout<<"So sinh vien dat diem chuan la"<<a.size()<<"\n";
         cout<<"Diem chuan du kien: "<<a[a.size()-1].Diem;
+        
     }else if(a.size()>=300){
         cout<<"Diem chuan du kien: "<<a[299].Diem<<endl;
     }
@@ -53,11 +55,10 @@ vector<Sinhvien> Nop(Sinhvien a,vector<Sinhvien>&sv){
 vector<Sinhvien> Rut(Sinhvien a,vector<Sinhvien>&sv){
     Sinhvien m;
     int i=0;
-    cout<<"Ho va ten sinh vien rut: "<<a.Hoten<<"\n";
-    for(Sinhvien ele:sv){
         
     if(a.Nganhnop==ele.Nganhnop && a.Diem==ele.Diem && a.Hoten==ele.Hoten){
         sv.erase(sv.begin()+i);
+        cout<<"Da rut thanh cong!!"
         break;
     }
         i++;
